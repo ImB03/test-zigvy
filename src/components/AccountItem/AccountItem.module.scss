@@ -1,0 +1,38 @@
+.wrapper {
+  display: flex;
+  align-items: center; //căn giữa theo chiều dọc
+  padding: 6px 16px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(22, 24, 35, 0.1);
+  }
+}
+
+.avata {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  object-fit: cover; //??????
+}
+
+.infor {
+  flex: 1;
+  margin-left: 12px;
+}
+
+.name {
+  font-weight: 500;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+}
+
+.check {
+  margin-left: 5px;
+  color: rgb(32, 213, 236);
+}
+.username {
+  font-size: 1.4rem;
+  color: rgba(22, 24, 35, 0.5);
+}
