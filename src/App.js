@@ -1,7 +1,6 @@
-import { Fragment } from 'react';
-
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { publicRoutes } from '~/routes';
+import HomePageAPI from './components/Layout/HomePageAPI';
 
 function App() {
   return (
@@ -11,15 +10,14 @@ function App() {
           {publicRoutes.map((route, index) => {
             const Page = route.components;
 
-            let Layout;
             return (
               <Route
                 key={index}
                 path={route.path}
                 element={
-                  <Layout>
+                  <HomePageAPI>
                     <Page />
-                  </Layout>
+                  </HomePageAPI>
                 }
               />
             );

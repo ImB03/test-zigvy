@@ -1,0 +1,12 @@
+.header {
+  border: 5px solid black;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo,
+.user-name {
+  width: 300px;
+}

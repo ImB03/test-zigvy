@@ -1,0 +1,15 @@
+.title {
+  text-align: center;
+}
+
+.infor-filter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title,
+.infor-filter,
+.text,
+.comment {
+  min-height: 200px;
+}
