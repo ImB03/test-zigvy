@@ -1,7 +1,5 @@
-import React from 'react'
+import React from 'react';
 
 export default function Upload() {
-  return (
-    <div>Upload page</div>
-  )
+  return <h2>Upload page</h2>;
 }

@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Profile() {
   return (
-    <div>Profile page</div>
+    <h2>Profile page</h2>
   )
 }

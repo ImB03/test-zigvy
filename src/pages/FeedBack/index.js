@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 export default function FeedBack() {
-  return <div>FeedBack</div>;
+  return <h2>Feedback page</h2>;
 }

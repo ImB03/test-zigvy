@@ -2,9 +2,12 @@
 //đặt biến
 :root {
   --primary: #fe2c55;
+  --scrollbar: hsla(348, 99%, 58%, 0.5);
   --black: black;
   --text-color: #161823;
   --white: white;
+
+  --font-family: 'ProximaNova', sans-serif;
 
   --default-layout-header-height: 60px;
   --default-layout-width: 1150px;
@@ -16,17 +19,33 @@ html {
 }
 
 * {
-
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'ProximaNova', sans-serif;
-  font-size: 5rem;
+  font-family: var(--font-family);
+  font-size: 1.6rem;
   line-height: 1.5;
   text-rendering: optimizespeed;
-  font-weight: 600;
   color: var(--text-color);
+  overflow-y: overlay;
+}
+
+html *::-webkit-scrollbar {
+  border-radius: 0;
+  width: 8px;
+}
+
+html *::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: hsla(286, 23%, 11%, 0.25);
+}
+
+html *::-webkit-scrollbar-track {
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 button,
@@ -36,7 +55,7 @@ input,
   border: none;
 }
 
-a[href] {
+a {
   color: var(--text-color);
   text-decoration: none;
 }
