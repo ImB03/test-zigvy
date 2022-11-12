@@ -1,22 +1,15 @@
 import config from '~/config';
-
-import FeedBack from '~/pages/FeedBack';
+import Main from '~/layouts';
 import Home from '~/pages/Home';
-import Following from '~/pages/Following';
-import Profile from '~/pages/Profile';
-import Upload from '~/pages/Upload';
-import Search from '~/pages/Search';
-import Live from '~/pages/Live';
-import { HeaderOnly } from '~/layouts';
+import ChooseAuthorBlogs from '~/pages/ChooseAuthorBlogs';
+import SearchAuthorBlogs from '~/pages/SearchAuthorBlogs';
+import ContentBlog from '~/pages/ContentBlog';
 
 const publicRoutes = [
-  { path: config.routes.feedback, components: FeedBack },
-  { path: config.routes.home, components: Home },
-  { path: config.routes.following, components: Following },
-  { path: config.routes.profile, components: Profile },
-  { path: config.routes.upload, components: Upload, layout: HeaderOnly },
-  { path: config.routes.search, components: Search },
-  { path: config.routes.live, components: Live },
+  { path: config.routes.home, components: Home, layout: Main },
+  { path: config.routes.chooseauthorblogs, components: ChooseAuthorBlogs, layout: Main },
+  { path: config.routes.searchauthorblogs, components: SearchAuthorBlogs, layout: Main },
+  { path: config.routes.contentblog, components: ContentBlog, layout: Main },
 ];
 const privateRoutes = [];
 export { publicRoutes, privateRoutes };

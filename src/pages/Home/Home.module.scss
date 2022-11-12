@@ -1,0 +1,17 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: #72f50f;
+  padding: 40px;
+  border-radius: 20px;
+  justify-content: center;
+  & .blog {
+    border-radius: 20px;
+    background-color: rgba(245, 227, 227, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    font-size: 25px;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+  }
+}

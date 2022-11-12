@@ -1,21 +1,7 @@
 @import 'normalize.css';
 //đặt biến
 :root {
-  --primary: #fe2c55;
-  --scrollbar: hsla(348, 99%, 58%, 0.5);
-  --black: black;
   --text-color: #161823;
-  --white: white;
-
-  --font-family: 'ProximaNova', sans-serif;
-
-  --default-layout-header-height: 60px;
-  --default-layout-width: 1150px;
-  --default-layout-horizontal-spacer: 24px;
-}
-
-html {
-  font-size: 62.5%;
 }
 
 * {
@@ -26,7 +12,6 @@ html {
 
 body {
   font-family: var(--font-family);
-  font-size: 1.6rem;
   line-height: 1.5;
   text-rendering: optimizespeed;
   color: var(--text-color);
@@ -82,22 +67,4 @@ a {
   font-family: SofiaPro;
   src: url('/assets/fonts/sofiapro-bold.woff');
   font-weight: 700;
-}
-
-body {
-  .tippy-box {
-    background-color: rgba(84, 84, 84, 0.92);
-    border-radius: 8px;
-    font-weight: 600;
-    line-height: 2.2rem;
-  }
-  .tippy-arrow {
-    color: rgba(84, 84, 84, 0.92);
-  }
-  .tippy-content {
-    padding: 8px 9px;
-  }
-  .tippy-box[data-placement^='bottom'] > .tippy-arrow:before {
-    top: -8px;
-  }
 }

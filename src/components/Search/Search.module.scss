@@ -1,0 +1,30 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+
+  & .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(247, 117, 37);
+    margin: 20px;
+    border-radius: 50px;
+    min-width: 700px;
+
+    & .iconsearch {
+      margin: 25px;
+      color: aqua;
+      font-size: 40px;
+    }
+
+    & .search {
+      background-color: rgb(247, 117, 37);
+      width: 600px;
+      border-radius: 50px;
+      font-size: 30px;
+      padding: 15px 5px;
+    }
+  }
+}

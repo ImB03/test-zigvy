@@ -1,0 +1,57 @@
+.wrapper {
+  font-size: 40px;
+
+  & .header {
+    display: flex;
+    flex-direction: row-reverse;
+
+    & .user {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & .avatar {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        flex-shrink: 0;
+      }
+      & .username {
+      }
+    }
+  }
+
+  & .postid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & .info {
+    & .author {
+    }
+
+    & .date {
+    }
+  }
+
+  & .content {
+  }
+
+  & .comments {
+    & .usercomment {
+      display: flex;
+      & .avatar {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        flex-shrink: 0;
+      }
+
+      & .infocomment {
+      }
+    }
+  }
+}

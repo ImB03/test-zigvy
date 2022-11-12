@@ -1,10 +1,7 @@
 const routes = {
-  feedback: '/feedback',
   home: '/',
-  following: '/following',
-  profile: '/@:nickname',
-  upload: '/upload',
-  search: '/search',
-  live: '/live',
+  chooseauthorblogs: '/chooseauthorblogs/:userId',
+  searchauthorblogs: '/searchauthorblogs/:input',
+  contentblog: '/contentblog/:postId',
 };
 export default routes;
