@@ -2,6 +2,14 @@
 //đặt biến
 :root {
   --text-color: #161823;
+  --font-family: 'ProximaNova', sans-serif;
+}
+
+.box {
+  background-color: lightblue;
+  border: 1px solid blue;
+  min-height: 50px;
+  font-size: 2rem;
 }
 
 * {
@@ -15,7 +23,8 @@ body {
   line-height: 1.5;
   text-rendering: optimizespeed;
   color: var(--text-color);
-  overflow-y: overlay;
+  overflow-y: auto;
+  background-color: #e8ebf0;
 }
 
 html *::-webkit-scrollbar {
@@ -42,7 +51,7 @@ input,
 
 a {
   color: var(--text-color);
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 @font-face {
@@ -67,4 +76,9 @@ a {
   font-family: SofiaPro;
   src: url('/assets/fonts/sofiapro-bold.woff');
   font-weight: 700;
+}
+
+hr {
+  margin: 30px 20px;
+  color: #ccc;
 }

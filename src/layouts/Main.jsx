@@ -1,39 +1,42 @@
-import { useState, useEffect, createContext } from 'react';
 import classNames from 'classnames/bind';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 
 import styles from './Main.module.scss';
 import Header from '~/components/Header';
 import Search from '~/components/Search';
 import Navbar from '~/components/Navbar';
+import { getUsersFetch } from '~/redux/usersSlice';
+import { getPostsFetch } from '~/redux/postsSlice';
 
 const cx = classNames.bind(styles);
-export const DataUsers = createContext();
 
 export default function Main({ children }) {
-  const [getApiUsers, setGetApiUsers] = useState([]);
-
-  const getUsersApi = async () => {
-    const data = await fetch(`https://jsonplaceholder.typicode.com/users`);
-    const infoUsers = await data.json();
-    setGetApiUsers(infoUsers);
-  };
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    getUsersApi();
+    dispatch(getUsersFetch());
+  }, []);
+
+  useEffect(() => {
+    dispatch(getPostsFetch());
   }, []);
 
   return (
-    <DataUsers.Provider value={getApiUsers}>
-      <div className={cx('wrapper')}>
-        <Header />
-        <div className={cx('body')}>
+    <div className={cx('wrapper container-fluid')}>
+      <Header />
+      <div className={cx('body container-fluid d-flex')}>
+        <div className={cx('d-none d-xxl-block')}>
           <Navbar />
-          <div className={cx('container')}>
+        </div>
+        <div className={cx('container-fluid')}>
+          <div className={cx('d-flex justify-content-center align-items-center')}>
             <Search />
-            <div className={cx('pages')}>{children}</div>
           </div>
+          <div className={cx('pages')}>{children}</div>
         </div>
       </div>
-    </DataUsers.Provider>
+    </div>
   );
 }
